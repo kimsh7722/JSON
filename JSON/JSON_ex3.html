@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        var movie_list = [] // 빈배열
+
+        // n개의 영화 입력
+        var movie=prompt("영화 갯수 입력하십시오");
+        movie=parseInt(movie);
+        
+        for(var j=0; j<movie; j++) {
+            // 영화정보 생성
+            var movie_name=prompt("영화 제목");
+            var movie_director=prompt("감독 이름");
+            var movie_time=prompt("재생 시간");
+            movie_time=parseInt(movie_time);
+            
+            // 영화 배열 삽입
+            var movie_obj={name:movie_name,director:movie_director,time:movie_time}
+            
+            // 삽입된 영화배열을 list다시 삽입
+            movie_list.push(movie_obj)
+        }
+
+        for(var i=0; i<=movie_list.length; i++) {
+            document.write("제목 : "+movie_list[i].name,"<br>");
+            document.write("감독 : "+movie_list[i].director,"<br>");
+            document.write("런닝시간 : "+movie_list[i].time,"<br>");
+            document.write("<hr>");
+        }
+    </script>
 </head>
 <body>
     

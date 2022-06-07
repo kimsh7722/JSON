@@ -6,18 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        
+        // 길이가 3인 JSON배열
         var person_list=[
             {name:'김성훈', age:31, height:169.2},
             {name:'김훈', age:100, height:181.5},
             {name:'소현', age:25, height:170.5}
+            
         ]
+        
+        // JSON배열에 원소 한개 추가
+        person_list.push({name:'김철수',age:23,height:170.5})
+        
+        // 입력값으로 추가 
+        var person_name = prompt("이름 입력하십시오");
+        var person_age = prompt("나이 입력하십시오");
+        person_age=parseInt(person_age);
+        var person_height = prompt("키 입력하십시오");
+        person_height=parseFloat(person_height);
+
+        var person_obj={name:person_name,age:person_age,height:person_height}
+        person_list.push(person_obj)
+
         // JSON 배열
         // 자바스크립트 객체 배열
-        
         for(var i=0; i<person_list.length; i++) {
             document.write("이름 : "+person_list[i].name,"<br>")
-            document.write("이름 : "+person_list[i].age,"<br>")
-            document.write("이름 : "+person_list[i].height,"<br>")
+            document.write("나이 : "+person_list[i].age,"<br>")
+            document.write("키 : "+person_list[i].height,"<br>")
             document.write("<hr>");
         }
 
